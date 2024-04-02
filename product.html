@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar Group</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/santu.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace-theme-default.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+  <body>
+   <!-- Preloader -->
+   <div id="preloader"></div>
+    <!-- End Preloader -->
+
+    <!-- Your Content -->
+    <div class="<?php echo $isPageLoading ? 'showX' : 'hideX'; ?>">
+        <div class="loading">
+            <div class="charka-img">
+                <img src="img/charka.png" alt="">
+            </div>
+            <div class="parent-span">
+                <img  src="img/preloader-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Your Content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+
+    <script>
+        const loadingPace = () => {
+            Pace.on("start", function () {
+                document.querySelector("#preloader").classList.remove("isdone");
+                document.querySelector(".loading").classList.remove("isdone");
+            });
+            Pace.on("done", function () {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+            });
+
+            if (document.querySelector("body").classList.contains("pace-done")) {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+            }
+
+            window.addEventListener("load", () => {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+                if (document.querySelector('.pace-running.pace-running')) {
+                    document.querySelector('.pace-running.pace-running').classList.remove('pace-running')
+                }
+            });
+        };
+
+        loadingPace();
+    </script>
+
+
+
+    <header class="header" id="header">
+        <div class="container-fluid pt-0 pt-lg-2">
+            <div class="pre-header my-2 my-lg-3 mx-0 mx-lg-3">
+                <div class="logo-item">
+                    <a href="index.html" class="brand-logo"><img src="img/logo.png" alt="Solar Group" class="img-fluid"></a>
+                </div>
+                <div class="menu-item pre-header-menu d-none d-lg-flex">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="contact.html">Contact us</a></li>
+                        <li class="list-inline-item"><a href="#">Sitemap</a></li>
+                        <li class="list-inline-item"><a href="#" class="search-icon"><i class="ri-search-line"></i></a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar2">
+                        <i class="ri-menu-4-fill"></i>
+                </button>
+            </div>
+            <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large" id="navigation">
+                <div class="container-fluid">
+                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar2Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav flex-grow-1 ">
+                                <li class="nav-item"><a class="nav-link pl-0" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Technology</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="invester.html">Investor Relations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="esg.html">Sustainability</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">News & Media</a></li> -->
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Careers</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="news.html">News & Media</a></li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">News & Media <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                                        <li><a class="dropdown-item" href="media.html">Media</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Careers <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Life at solar</a></li>
+                                        <li><a class="dropdown-item" href="our-team.html">Join our team</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto navbar-social d-none d-xl-flex">
+                                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                                <!-- <li><a href="#"><i class="ri-youtube-fill"></i></a></li> -->
+                                <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer d-block d-lg-none pt-3 pb-3">
+                            <p class="text-muted text-center mb-2 text-sm">Follow us:</p>
+                            <div class="social-links  text-center">
+                                <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script>
+        document.getElementById('card1').addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    </script>
+    <section class="section section-amplify overflow-hidden">
+        <img src="img/contact-banner.jpg" alt="" class="amp-img img-fluid" data-aos="zoom-in">
+        <div class="container-outer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-8">
+                        <div class="banner-content" data-aos="fade-left">
+                            <h2 class="h1">Products</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-red"></div>
+    </section>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/600x400" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-4">A Portfolio of Industry-best Solutions</h4>
+                    <p>We have fortified our position as a global leader in explosive solutions with a robust marketing network that spans worldwide. Our commitment to introducing advancements in Industrial Explosives and Defence Explosives has resulted in a high-end product line of truly cutting-edge and industry-leading products.</p>
+                    <p>To future proof the operations of our clients’ businesses, we are leveraging advanced systems and smarter solutions. Our objective is to enable and support our customers around the globe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer overflow-hidden position-relative" id="footer">
+    <div class="footer-chakra">
+        <img src="img/footer-chakra.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="widget">
+                    <a href="index.html" data-aos="zoom-in"><img src="img/logo.png" alt="" class="img-fluid footer-logo mb-3"></a>
+                    <!-- <p>Solar provides complete blasting solutions which includes packaged, bulk explosives and initiating systems to meet its customer needs across the globe.</p> -->
+                    <div class="social-links" data-aos="fade-up">
+                        <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                        <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 offset-lg-1">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <!-- <li><a href="#">Technology</a></li> -->
+                                <li><a href="esg.html">Sustainability</a></li>
+                                <li><a href="news.html">News & Media</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Investors</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="invester.html">Financial Information</a></li>
+                                <li><a href="invester.html">Corporate Governance</a></li>
+                                <li><a href="invester.html">Stock Information</a></li>
+                                <li><a href="invester.html">Investor Updates</a></li>
+                                <li><a href="invester.html">News & Announcements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Legal Policies</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-lg-flex justify-content-between row-copyright">
+            <div class="col-12 col-lg-6">
+                <p>&copy; 2024 Solar Group | All Rights Reserved</p>
+            </div>
+            <div class="col-12 col-lg-6 text-left text-lg-end">
+                <p>Website by <a href="#">K&A</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <img src="img/solar-footer-text1.svg" alt="" class="footer-text-logo" id="footerLogoBig"> -->
+</footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+    <script src="plugin/parallax.min.js"></script>
+    <script src="plugin/splitting.min.js"></script>
+  
+    <!-- <script src="plugin/particle.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollToPlugin.min.js"></script> -->
+    <script src="js/custom.js"></script>
+    
+  </body>
+</html>

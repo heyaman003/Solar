@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solar Group</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/santu.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace-theme-default.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+  <body>
+   <!-- Preloader -->
+   <div id="preloader"></div>
+    <!-- End Preloader -->
+
+    <!-- Your Content -->
+    <div class="<?php echo $isPageLoading ? 'showX' : 'hideX'; ?>">
+        <div class="loading">
+            <div class="charka-img">
+                <img src="img/charka.png" alt="">
+            </div>
+            <div class="parent-span">
+                <img  src="img/preloader-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Your Content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+
+    <script>
+        const loadingPace = () => {
+            Pace.on("start", function () {
+                document.querySelector("#preloader").classList.remove("isdone");
+                document.querySelector(".loading").classList.remove("isdone");
+            });
+            Pace.on("done", function () {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+            });
+
+            if (document.querySelector("body").classList.contains("pace-done")) {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+            }
+
+            window.addEventListener("load", () => {
+                document.querySelector("#preloader").classList.add("isdone");
+                document.querySelector(".loading").classList.add("isdone");
+                if (document.querySelector('.pace-running.pace-running')) {
+                    document.querySelector('.pace-running.pace-running').classList.remove('pace-running')
+                }
+            });
+        };
+
+        loadingPace();
+    </script>
+
+
+
+    <header class="header" id="header">
+        <div class="container-fluid pt-0 pt-lg-2">
+            <div class="pre-header my-2 my-lg-3 mx-0 mx-lg-3">
+                <div class="logo-item">
+                    <a href="index.html" class="brand-logo"><img src="img/logo.png" alt="Solar Group" class="img-fluid"></a>
+                </div>
+                <div class="menu-item pre-header-menu d-none d-lg-flex">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="contact.html">Contact us</a></li>
+                        <li class="list-inline-item"><a href="#">Sitemap</a></li>
+                        <li class="list-inline-item"><a href="#" class="search-icon"><i class="ri-search-line"></i></a></li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar2">
+                        <i class="ri-menu-4-fill"></i>
+                </button>
+            </div>
+            <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large" id="navigation">
+                <div class="container-fluid">
+                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar2Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav flex-grow-1 ">
+                                <li class="nav-item"><a class="nav-link pl-0" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Technology</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="invester.html">Investor Relations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="esg.html">Sustainability</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">News & Media</a></li> -->
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Careers</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="news.html">News & Media</a></li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">News & Media <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                                        <li><a class="dropdown-item" href="media.html">Media</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Careers <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Life at solar</a></li>
+                                        <li><a class="dropdown-item" href="our-team.html">Join our team</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto navbar-social d-none d-xl-flex">
+                                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                                <!-- <li><a href="#"><i class="ri-youtube-fill"></i></a></li> -->
+                                <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer d-block d-lg-none pt-3 pb-3">
+                            <p class="text-muted text-center mb-2 text-sm">Follow us:</p>
+                            <div class="social-links  text-center">
+                                <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script>
+        document.getElementById('card1').addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    </script>
+    
+<div class="Pushingthe mt150"></div>
+<div class="section section-n-media">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="news-heading text-black" data-aos="fade-up">Media</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="swiper news-swiper" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="from-wrapper" style="background-image: url('img/news/times-india.png')">
+                                <div class="d-flex aling-item-center justify-content-between position-absolute bottom-0">
+                                    <div class="content-box">
+                                        <h3 class="text-white fs-6 fw-bold d-flex align-items-end">TIMES OF INDIA <span class="fw-normal">| 4 MONTHS AGO</span></h3>
+                                        <p class="d-flex align-items-end text-white">Ullit Fugiassed Everat Faceate Et Ut <br> Repudan Dempori Busciendloriadel</p>
+                                    </div>
+                                    <div class="icon-bar">
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-add-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="from-wrapper" style="background-image: url('img/news/times-india-2.png')">
+                                <div class="d-flex aling-item-center justify-content-between position-absolute bottom-0">
+                                    <div class="content-box">
+                                        <h3 class="text-white fs-6 fw-bold  d-flex align-items-end">TIMES OF INDIA <span class="fw-normal">| 4 MONTHS AGO</span></h3>
+                                        <p class="d-flex align-items-end text-white">Ullit Fugiassed Everat Faceate Et Ut <br> Repudan Dempori Busciendloriadel</p>
+                                    </div>
+                                    <div class="icon-bar">
+                                        <i class="ri-add-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="from-wrapper" style="background-image: url('img/news/times-india-3.png')">
+                                <div class="d-flex aling-item-center justify-content-between position-absolute bottom-0">
+                                    <div class="content-box">
+                                        <h3 class="text-white fs-6 fw-bold  d-flex align-items-end">TIMES OF INDIA <span class="fw-normal">| 4 MONTHS AGO</span></h3>
+                                        <p class="d-flex align-items-end text-white">Ullit Fugiassed Everat Faceate Et Ut <br> Repudan Dempori Busciendloriadel</p>
+                                    </div>
+                                    <div class="icon-bar">
+                                        <i class="ri-add-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="from-wrapper" style="background-image: url('img/news/times-india.png')">
+                                <div class="d-flex aling-item-center justify-content-between position-absolute bottom-0">
+                                    <div class="content-box">
+                                        <h3 class="text-white fs-6 fw-bold  d-flex align-items-end">TIMES OF INDIA <span class="fw-normal">| 4 MONTHS AGO</span></h3>
+                                        <p class="d-flex align-items-end text-white">Ullit Fugiassed Everat Faceate Et Ut <br> Repudan Dempori Busciendloriadel</p>
+                                    </div>
+                                    <div class="icon-bar">
+                                        <i class="ri-add-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><img src="img/right-arrow.png" alt=""></div>
+                    <div class="swiper-button-prev"><img src="img/left-arrow.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-n-news">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="news-heading text-black ms-5" data-aos="fade-up">News</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="swiper media-swiper new-line" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ps-5 pe-5">
+                            <div class="news-item">
+                                <h5 class="fw-bold text-white">
+                                India News | Maharashtra: CDS Gen Anil Chauhan Visits Solar Industries in Nagpur</h5>
+                                <p class="fw-semibold text-white">Get latest articles and stories on India at LatestLY. He was received by the Chairman of Solar Group Shri Satyanarayan Nuwal and apprised about the contributions of Solar Group in the development, manufacturing and supply of Industrial Explosives, Military Explosives and other high-energy materials, the release stated. </p>
+                                <a class="news-link-btn" style="color:white; font-weight:bold;  border:1px solid white; border-radius: 50px;padding: 2px 5px" target=blank href="https://www.latestly.com/agency-news/india-news-maharashtra-cds-gen-anil-chauhan-visits-solar-industries-in-nagpur-5192014.html">Read more:</a>
+                                 
+                            </div>
+                        </div>
+                        <div class="swiper-slide ps-5 pe-5">
+                            <div class="news-item">
+                                <div id="profile-description">
+                                    <div class="text show-more-height">
+                                        <h5 class="fw-bold text-white">CDS General Anil Chauhan visits EEL facility in Nagpur, oversees production of arms</h5>
+                                        <p class="fw-semibold text-white">The Chief of Defence Staff (CDS), General Anil Chauhan, visited Solar Industries' subsidiary, Economic Explosives Ltd. (EEL), in Maharashtra's Nagpur on Saturday, where he watched a demonstration firing of the indigenous 30mm ammunition being supplied to the Indian Navy. He also observed a test firing of the smallest rocket motor currently under development at EEL, which will enhance the Counter Drone System's capabilities with both hard kill and soft kill functions.</p>
+                                    </div>
+                                    <a class="news-link-btn" style="color:white; font-weight:bold;  border:1px solid white; border-radius: 50px;padding: 2px 5px" target=blank href="https://www.indiatoday.in/india/story/cds-general-anil-chauhan-solar-industries-nagpur-arms-production-2391434-2023-06-10">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ps-5 pe-5">
+                            <div class="news-item">
+                                <h5 class="fw-bold text-white">Solar Industries demonstrates smallest rocket motor to CDS Gen Anil Chauhan</h5>
+                                <p class="fw-semibold text-white">The Chief of Defence Staff (CDS) General Anil Chauhan (Retired), PVSM, UYSM, AVSM, SM, VSM, visited city-based Economic Explosives Ltd. (EEL), a subsidiary of Solar Group of Industries, on Saturday. On the occasion, the CDS was shown test firing of the smallest rocket motor, a state-of-the-art product, under development at the EEL. </p>
+                                <a class="news-link-btn" style="color:white; font-weight:bold;  border:1px solid white; border-radius: 50px;padding: 2px 5px" target=blank href="https://www.thehitavada.com/Encyc/2023/6/11/Solar-Industries-demonstrates-smallest-rocket-motor-to-CDS-Gen-Anil-Chauhan.html">Read More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide ps-5 pe-5">
+                            <div class="news-item">
+                                <h5 class="fw-bold text-white">CDS visits EEL in Nagpur, sees demonstration of indigenous munitions</h5>
+                                <p class="fw-semibold text-white">The Chief of Defence Staff (CDS) General Anil Chauhan on Saturday visited Economic Explosives Limited (EEL) in Nagpur and was given a demonstration of the test firing of the smallest rocket motor which is under development at the facility.
+                                EEL is a subsidiary of Solar Group of Industries, whose chairman Satyanarayan Nuwal apprised the CDS about the contribution of the group in development, manufacturing and supply of industrial and military explosives as well as other high energy materials.</p>
+                                <a class="news-link-btn" style="color:white; font-weight:bold;  border:1px solid white; border-radius: 50px;padding: 2px 5px" target=blank href="https://www.business-standard.com/india-news/cds-visits-eel-in-nagpur-sees-demonstration-of-indigenous-munitions-123061000749_1.html">Read More</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next line-icon-pre1 rounded-circle"></div>
+                    <div class="swiper-button-prev line-icon-nex1 rounded-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">TIMES OF INDIA | 4 MONTHS AGO</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ullit Fugiassed Everat Faceate Et Ut Repudan Dempori BusciendloriadelNequem haliiste, conente conscrectum ius con des auconsiceps, iuro tabutes! Ignatus es omactus.</p>
+      </div>
+      <div class="modal-footer">
+        <a data-aos="fade-up" data-aos-delay="200" href="about.html" class="circle-link">For more details <span class="arrow"><i class="ri-arrow-right-line back"></i><i class="ri-arrow-right-line front"></i></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<footer class="footer overflow-hidden position-relative" id="footer">
+    <div class="footer-chakra">
+        <img src="img/footer-chakra.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="widget">
+                    <a href="index.html" data-aos="zoom-in"><img src="img/logo.png" alt="" class="img-fluid footer-logo mb-3"></a>
+                    <!-- <p>Solar provides complete blasting solutions which includes packaged, bulk explosives and initiating systems to meet its customer needs across the globe.</p> -->
+                    <div class="social-links" data-aos="fade-up">
+                        <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                        <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 offset-lg-1">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <!-- <li><a href="#">Technology</a></li> -->
+                                <li><a href="esg.html">Sustainability</a></li>
+                                <li><a href="news.html">News & Media</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Investors</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="invester.html">Financial Information</a></li>
+                                <li><a href="invester.html">Corporate Governance</a></li>
+                                <li><a href="invester.html">Stock Information</a></li>
+                                <li><a href="invester.html">Investor Updates</a></li>
+                                <li><a href="invester.html">News & Announcements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="widget" data-aos="fade-up">
+                            <h5 class="footer-title">Legal Policies</h5>
+                            <ul class="list-unstyled footer-menu">
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-lg-flex justify-content-between row-copyright">
+            <div class="col-12 col-lg-6">
+                <p>&copy; 2024 Solar Group | All Rights Reserved</p>
+            </div>
+            <div class="col-12 col-lg-6 text-left text-lg-end">
+                <p>Website by <a href="#">K&A</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <img src="img/solar-footer-text1.svg" alt="" class="footer-text-logo" id="footerLogoBig"> -->
+</footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+    <script src="plugin/parallax.min.js"></script>
+    <script src="plugin/splitting.min.js"></script>
+  
+    <!-- <script src="plugin/particle.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollToPlugin.min.js"></script> -->
+    <script src="js/custom.js"></script>
+    
+  </body>
+</html>
