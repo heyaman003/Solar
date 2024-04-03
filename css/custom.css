@@ -13950,7 +13950,11 @@ header.header::before {
     text-transform: uppercase
 }
 
-.news-box .image {
+.news-box .image img{
+    height: 200px;
+
+}
+    .news-box .image {
     display: block;
     overflow: hidden;
     margin-bottom: 1rem;
@@ -14520,7 +14524,6 @@ span.pluse:after {
         transition: none
     }
 }
-
 .about-map .tooltip-box {
     width: 8px;
     height: 8px;
@@ -14541,15 +14544,69 @@ span.pluse:after {
 }
 
 .about-map .tooltip-box.tool-1 {
-    top: 19.1%;
-    left: 27.9%
+    top: 40%;
+    left: 73.5%
 }
 
 .about-map .tooltip-box.tool-2 {
-    top: 23.6%;
-    left: 24.9%
-}
+    top: 41.5%;
+    left: 74%
 
+}
+.about-map .tooltip-box.tool-3 {
+    top: 40.5%;
+    left: 69.5%
+
+}
+.about-map .tooltip-box.tool-4 {
+    top: 41.5%;
+    left: 71%
+
+}
+.about-map .tooltip-box.tool-5 {
+    top: 42.5%;
+    left: 72.5%
+}
+.about-map .tooltip-box.tool-6 {
+    top: 45%;
+    left: 70%
+}
+.about-map .tooltip-box.tool-7 {
+    top: 43%;
+    left: 73.5%
+}
+.about-map .tooltip-box.tool-8 {
+    top: 49%;
+    left: 71.5%
+}
+.about-map .tooltip-box.tool-9 {
+    top: 29%;
+    left: 55.5%
+}
+.about-map .tooltip-box.tool-10 {
+    top: 62.5%;
+    left: 54.5%
+}
+.about-map .tooltip-box.tool-11 {
+    top: 50%;
+    left: 45%
+}
+.about-map .tooltip-box.tool-12 {
+    top: 83%;
+    left: 52%
+}
+.about-map .tooltip-box.tool-13 {
+    top: 77%;
+    left: 90%;
+}
+.about-map .tooltip-box.tool-14 {
+    top: 53%;
+    left: 43%
+}
+.about-map .tooltip-box.tool-15 {
+    top: 63%;
+    left: 57%
+}
 .about-map .tooltip-box i {
     background-color: #f50028;
     color: #f50028;
@@ -15231,7 +15288,10 @@ span.pluse:after {
 }
 
 .map-footprint {
-    position: relative
+    position: relative;
+    width: 90%;
+    justify-content: center;
+    margin: auto;
 }
 
 .map-footprint svg {
