@@ -16,13 +16,18 @@
     height: 1px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
   }
   
   
+  body {
+    margin: 0;
+    /* overflow: hidden; */
+  }
   
+ 
   .pace.pace-inactive {
     width: 100vw;
     opacity: 0;
@@ -76,14 +81,14 @@
     transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
     -webkit-transition-delay: 1s;
     -o-transition-delay: 1s;
-    transition-delay: 1s;
+    transition-delay: 1.5s;
   }
   
   .loading{
     color: white;
     position: fixed;
-    left: 48%;
-    top: 40%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%,-50%);
     font-weight: 600;
     font-size: 18px;
@@ -98,26 +103,52 @@
     align-items: center;
     gap: 10%;
     height: 100%;
+    /* animation: loadinganime 3s ease infinite; */
+
   }
   
+
+  @keyframes loadinganime {
+    0% {
+      opacity: 1;
+      /* left: 48%;
+      top: 40%; */
+      transform: translate(-50%,-50%) ;
+      /* z-index: 9999999999; */
+    }
+    100% {
+      opacity: 1;
+
+      /* left: 15%;
+      right: 15%;
+      top: 0%; */
+      transform: translate(-50%,-50%) ;
+      z-index: -1;
+    }
+  }
+  
+
+
+
   .loading.isdone {
-    animation: loadingFadeAndZoom 2s ease forwards;
+    animation: loadingFadeAndZoom 4s ease forwards;
+    /* animation: none; */
   }
   
   @keyframes loadingFadeAndZoom {
     0% {
       opacity: 1;
-      left: 48%;
-      top: 40%;
-      transform: translate(-50%,-50%) scale(1);
-      z-index: 9999999999;
+      /* left: 48%;
+      top: 40%; */
+      transform: translate(-50%,-50%) ;
+      /* z-index: 9999999999; */
     }
     100% {
       opacity: 0;
-      left: 15%;
+      /* left: 15%;
       right: 15%;
-      top: 0%;
-      transform: translate(-50%,-50%) scale(10);
+      top: 0%; */
+      transform: translate(-50%,-50%) ;
       z-index: -1;
     }
   }
@@ -387,4 +418,20 @@
 .loading .parent-span{
   width: 30%;
   height: 20%;
+}
+canvas {
+  /* z-index: 3; */
+  /* background-image: radial-gradient(#666, #333); */
+  background-color: #EC1E2F;
+}
+
+#instructions {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  padding-bottom: 6px;
+  font-family: sans-serif;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
 }

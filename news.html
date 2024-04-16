@@ -28,12 +28,8 @@
     <!-- Your Content -->
     <div class="<?php echo $isPageLoading ? 'showX' : 'hideX'; ?>">
         <div class="loading">
-            <div class="charka-img">
-                <img src="img/charka.png" alt="">
-            </div>
-            <div class="parent-span">
-                <img  src="img/preloader-logo.png" alt="">
-            </div>
+            <div class="loading">
+                <div id="three-container" style="z-index: 9999999999999999; width: 100vw; height: 100vh;"></div>
         </div>
     </div>
     <!-- End Your Content -->
@@ -393,6 +389,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollToPlugin.min.js"></script> -->
     <script src="js/custom.js"></script>
+
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+    <script  src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'>
+    </script>
+    <script  src="js/preloader.js"></script>
     
   </body>
 </html>
