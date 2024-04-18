@@ -12992,7 +12992,7 @@ header.header::before {
     background: #e7f1f1;
     padding-top: 5rem;
     padding-bottom: 1rem;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .footer .widget {
@@ -15557,9 +15557,15 @@ span.pluse:after {
     height: 100%
 }
 
+.section-a-awards{
+    width: 90%;
+    margin: auto;
+}
 .section-a-awards .awards-swiper {
     min-height: 200px;
-    width: 70%;
+    width: 100%;
+    overflow-wrap:normal;
+    /* padding: 0 2%; */
 }
 
 .section-a-awards .awards-swiper::before {
@@ -15660,7 +15666,7 @@ span.pluse:after {
     position: absolute;
     top: 20%;
     left: 7%;
-    width: 83%
+    width: 100%
 }
 
 .section-a-awards .people-swiper .product-bar:hover .overlay {
