@@ -20,7 +20,7 @@ function init() {
   var slide = new Slide(width, height, 'out');
   var l1 = new THREE.ImageLoader();
   l1.setCrossOrigin('Anonymous'); 
-  l1.load('http://127.0.0.1:5500/dist/charka.png', function(img) {
+  l1.load('img/charka.png', function(img) {
     slide.setImage(img);
   })
 root.scene.add(slide);
@@ -31,7 +31,7 @@ var height2 = 15;
 var slide2 = new Slide(width2, height2, 'in');
 var l2 = new THREE.ImageLoader();
   l2.setCrossOrigin('Anonymous');
-  l2.load('http://127.0.0.1:5500/dist/preloader-logo.png', function(img) {
+  l2.load('img/preloader-logo.png', function(img) {
       slide2.setImage(img);
   })
   root.scene.add(slide2);
