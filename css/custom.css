@@ -12989,7 +12989,7 @@ header.header::before {
 
 .footer {
     position: relative;
-    background: #e7f1f1;
+    background: #0b1429;
     padding-top: 5rem;
     padding-bottom: 1rem;
     overflow: hidden;
@@ -13010,7 +13010,7 @@ header.header::before {
     display: block;
     position: relative;
     padding: .35rem 0;
-    color: #21202b;
+    color: #fff;
     font-size: .9rem
 }
 
