@@ -433,3 +433,24 @@ function createTweenScrubber(tween, seekSpeed) {
     e.preventDefault();
   });
 }
+
+// MAP OVERLAY JS START
+$("#unique-map-1").on('click', function() {
+  $("#cm-1").addClass('model-open');
+});
+
+$("#unique-map-2").on('click', function() {
+  $("#cm-2").addClass('model-open');
+});
+
+$("#unique-map-3").on('click', function() {
+  $("#cm-3").addClass('model-open');
+});
+
+$(".close-btn, .bg-overlay").click(function(){
+  $(".custom-model-main").removeClass('model-open');
+});
+
+
+// MAP OVERLAY JS 
+

@@ -13812,7 +13812,7 @@ header.header::before {
 
 .pulse {
     cursor: pointer;
-    z-index: 2;
+    /* z-index: 2; */
     position: absolute;
     width: 10px;
     height: 10px;
@@ -13853,7 +13853,7 @@ header.header::before {
 
 .pulse2 {
     cursor: pointer;
-    z-index: 2;
+    /* z-index: 2; */
     position: absolute;
     width: 10px;
     height: 10px;
@@ -13933,7 +13933,7 @@ header.header::before {
 }
 
 #container {
-    z-index: 99
+    /* z-index: 99 */
 }
 
 .news-box {

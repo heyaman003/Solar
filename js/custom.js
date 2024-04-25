@@ -595,6 +595,31 @@ window.addEventListener("scroll", (e) => {
 });
 
 // SVG DRAW JS END***********
+
+
+
+// SVG DRAW 2 JS START***********
+window.addEventListener('scroll', function() {
+  const svg = document.querySelector('.stroke-path2');
+  const pathLength = svg.getTotalLength();
+  
+  // Calculate scroll percentage, ensuring it's between 0 and 1
+  let scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
+  
+  // Adjust the speed factor as needed (higher value for faster drawing)
+  const speedFactor = 9;
+  const drawLength = pathLength * scrollPercentage * speedFactor;
+
+  svg.style.strokeDasharray = pathLength;
+  svg.style.strokeDashoffset = pathLength - drawLength;
+});
+
+// SVG DRAW 2 JS END***********
+
+
+
+
 // Twincle JS Start*********
 // Number of stars
 const numStars = 150;
