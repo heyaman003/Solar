@@ -452,5 +452,47 @@ $(".close-btn, .bg-overlay").click(function(){
 });
 
 
-// MAP OVERLAY JS 
+// MAP OVERLAY JS END
 
+
+// SPACE PARTICLES JS START
+ // Initialize Three.js scene
+ const scene = new THREE.Scene();
+ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+ camera.position.z = 150;
+
+ const renderer = new THREE.WebGLRenderer(); 
+//  renderer.setSize(window.innerWidth, window.innerHeight);    
+ document.querySelector('.particle-wrap').appendChild(renderer.domElement);
+
+//  renderer.setClearColor( 0xffffff, 0 );
+ scene.background = new THREE.Color(0x000000 );
+ // Create particles
+ const particles = new THREE.Group();
+ const particleGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+ const particleMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff ,opacity: 0.5 }); // Set transparent to true and adjust opacity as needed
+
+
+ for (let i = 0; i < 1000; i++) {
+     const particle = new THREE.Mesh(particleGeometry, particleMaterial);
+     const theta = Math.random() * Math.PI * 2;
+     const phi = Math.acos(Math.random() * 2 - 1);
+     const radius = 50 + Math.random() * 300;
+     particle.position.x = radius * Math.sin(phi) * Math.cos(theta);
+     particle.position.y = radius * Math.sin(phi) * Math.sin(theta);
+     particle.position.z = radius * Math.cos(phi);
+     particles.add(particle);
+ }
+
+ scene.add(particles);
+
+ // Animation loop
+ function animate() {
+     requestAnimationFrame(animate);
+     particles.rotation.y += 0.001;
+     renderer.render(scene, camera);
+ }
+
+ animate();
+
+// SPACE PARTICLES JS END

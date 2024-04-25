@@ -81,7 +81,8 @@
 }
 
 :root {
-    font-size: var(--bs-root-font-size)
+    font-size: var(--bs-root-font-size);
+    overflow-x: hidden;
 }
 
 @media(prefers-reduced-motion: no-preference) {
@@ -12610,7 +12611,7 @@ a {
 
 .section .widget {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -12993,17 +12994,36 @@ header.header::before {
     padding-top: 5rem;
     padding-bottom: 1rem;
     overflow: hidden;
+    background: linear-gradient(to right, black 20%, #08142f 80%)
 }
+/* svg draw css end */
+.gradient-line {
+    width: 25vw;
+	margin: auto;
+    height: 4px;
+    background: linear-gradient(to right, transparent, rgb(34, 103, 222), transparent);
+}
+.particle-wrap{
+    width: 25vw;
+	margin: auto;
+    /* height: 40px; */
+    background-color: transparent	;
+    /* margin: auto;     */
+}
+
 
 .footer .widget {
     margin-top: 1rem;
     margin-bottom: 1rem;
     position: relative;
-    z-index: 1
+    z-index: 1;
+    text-align: center;
+
 }
 
 .footer .footer-logo {
-    width: 270px
+    width: 270px;
+    filter: drop-shadow(0.1rem 0.5rem 0.4rem red);
 }
 
 .footer .footer-menu li a {
