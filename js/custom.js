@@ -583,7 +583,7 @@ window.addEventListener('resize', calculatePathLengths);
 window.addEventListener("scroll", (e) => {
     paths.forEach(path => {
         let scrollPercentage = (document.documentElement.scrollTop + wrapper.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-        let drawLength = path.getTotalLength() * scrollPercentage * 1.8;
+        let drawLength = path.getTotalLength() * scrollPercentage * 5;
         path.style.strokeDashoffset = path.getTotalLength() - drawLength;
 
         if (scrollPercentage >= 0.99) {
@@ -647,3 +647,31 @@ function createStar() {
 
 
 // Twincle JS End***********
+
+
+// Chakra Video Play - Pause JS Start************
+  let options = {
+     root: null,
+     rootMargin: '0px',
+     threshold: 0.5,
+  };
+  let callback = (entries , observer) => {
+    entries.forEach(entry => {
+      if(entry.target.id == 'chakraCompVideo'){
+        if(entry.isIntersecting){
+          entry.target.play();
+          console.log("****Video is playing*****");
+        }
+        else{
+          entry.target.pause();
+          console.log("****Video is paused*****");
+
+        }
+      }
+  });
+  }
+  let observer = new IntersectionObserver(callback , options);
+  observer.observe(document.querySelector('#chakraCompVideo')); 
+// Chakra Video Play - Pause JS JS End***********
+
+
