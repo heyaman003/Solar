@@ -15,21 +15,8 @@
 </head>
 <body>
      <!-- Preloader -->
-     <div id="preloader"></div>
      <!-- End Preloader -->
  
-     <!-- Your Content -->
-     <div class="<?$isPageLoading ? 'showX' : 'hideX'; ?>">
-         <div class="loading">
-             <div id="three-container" style="z-index: 9999999999999999; width: 100vw; height: 100vh;"></div>
- 
-             <!-- <div id="instructions"> -->
-             <!-- click and drag to control the animation -->
-             <!-- </div> -->
- 
- 
-         </div>
-     </div>
      <!-- End Your Content -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
  
@@ -257,8 +244,10 @@
             </a>
           </div>
 
-        <div class="nextPrevArrows">
+        <div class="nextPrevArrows nextPrevArrows1">
             <button class="prev"> < </button>
+        </div>
+        <div class="nextPrevArrows nextPrevArrows2">
             <button class="next"> > </button>
         </div>
     </div>
@@ -341,10 +330,12 @@
 
         <!-- <img src="img/solar-footer-text1.svg" alt="" class="footer-text-logo" id="footerLogoBig"> -->
     </footer>
+    
     <script src="../js/preloader.js"></script>
+    <script src="./app.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="../Industrialist/app.js"></script>
+    
 </body>
 </html>
