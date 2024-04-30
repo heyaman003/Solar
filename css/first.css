@@ -144,7 +144,7 @@ padding: 0;
 	position: relative;
 	width: 100%;
 	z-index: 111;
-	height: 150vh;
+	height: 200vh;
 	background-color: #0b1429;
 
 }
@@ -162,7 +162,7 @@ padding: 0;
 .svg-draw-text-wrapper{
 	position: sticky;
 	text-align: center;
-	top: 30%;
+	top: 10%;
 	z-index: 0;
 
 }

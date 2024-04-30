@@ -583,7 +583,7 @@ window.addEventListener('resize', calculatePathLengths);
 window.addEventListener("scroll", (e) => {
     paths.forEach(path => {
         let scrollPercentage = (document.documentElement.scrollTop + wrapper.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-        let drawLength = path.getTotalLength() * scrollPercentage * 5;
+        let drawLength = path.getTotalLength() * scrollPercentage * 3.5;
         path.style.strokeDashoffset = path.getTotalLength() - drawLength;
 
         if (scrollPercentage >= 0.99) {
