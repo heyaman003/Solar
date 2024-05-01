@@ -13965,6 +13965,7 @@ header.header::before {
     border-top-left-radius: .4rem;
     background: #f50028;
     color: #fff;
+    width: 100%;
     font-size: .8rem;
     padding: .4rem .8rem .3rem;
     text-transform: uppercase
@@ -13972,6 +13973,7 @@ header.header::before {
 
 .news-box .image img{
     height: 200px;
+    width: 100%;
 
 }
     .news-box .image {
@@ -16094,17 +16096,21 @@ span.pluse:after {
 .about-content h2,
 .about-content .h2 {
     font-weight: 800;
-    font-size: 95px;
+    font-size: 5vw;
     color: #fff
 }
 
 .about-content h2 span,
 .about-content .h2 span {
     font-weight: 300;
-    font-size: 95px;
+    font-size: 5vw;
     display: block;
     margin-left: 70px
 }
+.about-content h6{
+    font-size: 1.2vw;
+}
+
 
 .home-swiper {
     width: 100%;

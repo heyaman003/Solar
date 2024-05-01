@@ -156,7 +156,12 @@ padding: 0;
 	margin: auto;
 }
 .svg-draw-wrapper-h1{
+	font-size: 4vw;
 	color: white;
+}
+.svg-draw-wrapper-p{
+	color: white;
+	font-size: 1vw;
 }
 
 .svg-draw-text-wrapper{
@@ -168,7 +173,7 @@ padding: 0;
 }
 
 .svg-draw-text-sec{
-	width: 50%;
+	width: 60%;
 	color: white;
 	text-align: center;
 	margin: auto;
@@ -486,3 +491,48 @@ padding: 0;
 	/* transform: translateX(-50%); */
 }
 /* CORD SVG CSS END */
+
+/* *********************************** */
+/* RESPONSIVE CSS FOR HOME PAGE START */
+/* *********************************** */
+@media (max-width: 768px) {
+    .corp-and-trade-view-container {
+		/* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .corp-and-trade-view-container > div {
+        width: 100%;
+        margin-left: 0 !important; /* Override margin-left */
+    }
+	.corp-v-cont{
+		width: 100%;
+	}
+
+	.news-box {
+		margin-bottom: 2rem;
+		margin: auto auto 5%;
+		width: 70%;
+	}
+	
+	.news-box .date {
+		width: 100%;
+	}
+	
+	.news-box .image img{
+		height: 200px;
+		width: 100%;
+	
+	}
+
+	
+}
+
+
+
+
+/* *********************************** */
+/* RESPONSIVE CSS FOR HOME PAGE END */
+/* *********************************** */
