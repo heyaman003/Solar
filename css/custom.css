@@ -13004,7 +13004,7 @@ header.header::before {
     background: linear-gradient(to right, transparent, rgb(34, 103, 222), transparent);
 }
 .particle-wrap{
-    width: 25vw;
+    /* width: 25vw; */
 	margin: auto;
     /* height: 40px; */
     background-color: transparent	;
@@ -16108,7 +16108,7 @@ span.pluse:after {
     margin-left: 70px
 }
 .about-content h6{
-    font-size: 1.2vw;
+    font-size: 18px;
 }
 
 
