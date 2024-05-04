@@ -271,6 +271,9 @@ padding: 0;
 .custom-model-main {
 	text-align: center;
 	overflow: hidden;
+	width: 80%;
+	height: 80%;
+	margin: auto;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -353,7 +356,6 @@ padding: 0;
 	position: relative;
 	z-index: 999;
 	height: fit-content ;
-	border: 2px solid red;
   }
   .model-open .bg-overlay {
 	background: rgba(0, 0, 0, 0.6);
@@ -362,7 +364,8 @@ padding: 0;
   .bg-overlay {
 	background: rgba(0, 0, 0, 0);
 	height: 100vh;
-	width: 100%;
+	width: 100vw;
+	margin: auto;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -577,7 +580,11 @@ padding: 0;
 		/* border: 2px solid black; */
 		scale: 2;
 	  }
+	  .map-footprint{
+		display: none;
+	  }
 	/* QUERIES FOR MAP END */
+
 }
 
 @media(max-width: 768px) {

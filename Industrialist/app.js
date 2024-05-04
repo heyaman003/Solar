@@ -100,4 +100,5 @@ tl.to(chars, {duration: 0.5, opacity:1, scale:1, y:0, rotationX:0, transformOrig
 
 })
 
+
 //  Preloader 2/////
