@@ -402,6 +402,15 @@ body {
         overflow: hidden;
         
     }
+    .wrapper {
+        bottom: 40%;
+    }
+    .nextPrevArrows2{
+        left: 90.5vw;
+    }
+.nextPrevArrows1{
+    left: 39vw;
+}
      .thumbnail .item{
        width: 100%;
        transform: skewX(0);
