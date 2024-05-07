@@ -397,4 +397,14 @@ body {
   transform: translatey(-50%);
   left: -0.65em;
 }
-
+@media screen and (max-width:800px) {
+    .thumbnail {
+        overflow: hidden;
+        
+    }
+     .thumbnail .item{
+       width: 100%;
+       transform: skewX(0);
+    }
+    
+}
