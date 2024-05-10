@@ -587,34 +587,6 @@ window.addEventListener('scroll', function() {
 
 
 
-// Twincle JS Start*********
-// Number of stars
-const numStars = 150;
-
-// Create stars
-for (let i = 0; i < numStars; i++) {
-    createStar();
-}
-
-// Function to create a star
-function createStar() {
-    // Create a star element
-    const star = document.createElement('div');
-    star.classList.add('star');
-
-    // Random position
-    const x = Math.random() * 100 + '%';
-    const y = Math.random() * 100 + '%';
-    star.style.left = x;
-    star.style.top = y;
-
-    // Append the star to the container
-    document.getElementById('starContainer').appendChild(star);
-}
-
-
-// Twincle JS End***********
-
 
 // Chakra Video Play - Pause JS Start************
   let options = {

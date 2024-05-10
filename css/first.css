@@ -761,3 +761,95 @@ div.highway-slider {
 		display: none;
 	}
 }
+
+
+	/* *********************************** */
+	/* RESPONSIVE CSS FOR ABOUT PAGE MAP START */
+	/* *********************************** */
+	.faq-main-row{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.faq_main_container{
+		width: 40%;
+		margin: auto;
+		/* border: 2px solid black; */
+	}
+	.faq_container { border-bottom: 2px solid red; }
+.faq_question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.answer {
+  padding: 0 10px 20px;
+  line-height: 1.5rem;
+}
+.fqa_headline_container h2 span { font-weight: 700; }
+.faq_question-text h3 { font-size: 22px; }
+
+.icon.active {
+  background: transparent;
+  border: 2px solid #fff;
+}
+.icon:hover { cursor: pointer; }
+.icon-shape { position: relative; width: 50px; height: 50px; }
+.icon .icon-shape::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.icon .icon-shape::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 30px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.icon .icon-shape.active::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 0.5s ease;
+}
+.icon .icon-shape.active::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+@media(max-width: 848px) {
+	.faq-main-row{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.faq_main_container{
+		width: 100%;
+		margin: auto;
+	}
+}
+
+	/* *********************************** */
+	/* RESPONSIVE CSS FOR ABOUT PAGE MAP END */
+	/* *********************************** */
