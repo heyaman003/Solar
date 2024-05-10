@@ -776,7 +776,12 @@ div.highway-slider {
 		margin: auto;
 		/* border: 2px solid black; */
 	}
-	.faq_container { border-bottom: 2px solid red; }
+	.faq_container { 
+		border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,0,128), rgba(255, 255, 255, 0));
+    border-image-slice: 1;
+    width:100%; 
+	}
 .faq_question {
   font-size: 1.2rem;
   font-weight: 600;
