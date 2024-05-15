@@ -10,7 +10,6 @@ thumbnail.appendChild(thumbnailItems[0])
 // Function for next button 
 nextBtn.onclick = function() {
     moveSlider('next')
-    console.log("i have been clicked");
 }
 
 

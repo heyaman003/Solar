@@ -1,16 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./Industrialist/style.css">
-    <link href="./css/custom.css" rel="stylesheet">
-    <link href="./css/santu.css" rel="stylesheet">
-    <link href="./css/first.css" rel="stylesheet">
-
-
-</head> -->
 
 <head>
     <meta charset="utf-8">
@@ -20,32 +9,25 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/santu.css" rel="stylesheet">
     <link href="css/first.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/preloader.css">
-    <link rel="stylesheet" href="./Industrialist/style.css">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="css/ppl-cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace-theme-default.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <!--plugin -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
-
 <body>
-      <!-- Preloader -->
-           <!-- Preloader -->
-     <div class="res-container" style="z-index:8;">
+    <div class="res-container" style="z-index:8;">
         <div class="res-row">
             <div id="block-1 b3">
 
@@ -123,207 +105,152 @@
         </div>
     </div>
 
-        <script>
-            // NEW LOADER JS
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-    setTimeout(function() {    document.getElementById("loading").className = "slideDown";
-    }, 2800);
-  },
-  false
-);
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-    setTimeout(function() {
-      document.getElementById("loading-center").className = "zoomOut";
-    }, 2200);
-  },
-  false
-);
-
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-    setTimeout(function() {
-      document.getElementById("block-1").className = "slideInUp";
-    }, 2800);
-  },
-  false
-);
-
-        </script>
-     <!-- End Preloader -->
-      <!-- End Preloader -->
-  
-      <!-- Your Content -->
-      
-  
-      <header class="header" id="header">
-          <div class="container-fluid pt-0 pt-lg-2">
-              <div class="pre-header my-2 my-lg-3 mx-0 mx-lg-3">
-                  <div class="logo-item">
-                      <a href="./index.html" class="brand-logo"><img src="../img/logo.png" alt="Solar Group"
-                              class="img-fluid"></a>
-                  </div>
-                  <div class="menu-item pre-header-menu d-none d-lg-flex">
-                      <ul class="list-inline mb-0">
-                          <li class="list-inline-item"><a href="./contact.html">Contact us</a></li>
-                          <li class="list-inline-item"><a href="#">Sitemap</a></li>
-                          <li class="list-inline-item"><a href="#" class="search-icon"><i class="ri-search-line"></i></a>
-                          </li>
-                      </ul>
-                  </div>
-                  <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar2">
-                      <i class="ri-menu-4-fill"></i>
-                  </button>
-              </div>
-              <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large" id="navigation">
-                  <div class="container-fluid">
-                      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"
-                          aria-labelledby="offcanvasNavbar2Label">
-                          <div class="offcanvas-header">
-                              <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                  aria-label="Close"></button>
-                          </div>
-                          <div class="offcanvas-body">
-                              <ul class="navbar-nav flex-grow-1 ">
-                                  <li class="nav-item"><a class="nav-link pl-0" href="index.html">Home</a></li>
-                                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                                  <li class="nav-item dropdown">
+    <header class="header" id="header">
+        <div class="container-fluid pt-0 pt-lg-2">
+            <div class="pre-header my-2 my-lg-3 mx-0 mx-lg-3">
+                <div class="logo-item">
+                    <a href="index.html" class="brand-logo"><img src="img/logo.png" alt="Solar Group"
+                            class="img-fluid"></a>
+                </div>
+                <div class="menu-item pre-header-menu d-none d-lg-flex">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="contact.html">Contact us</a></li>
+                        <li class="list-inline-item"><a href="#">Sitemap</a></li>
+                        <li class="list-inline-item"><a href="#" class="search-icon"><i class="ri-search-line"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar2">
+                    <i class="ri-menu-4-fill"></i>
+                </button>
+            </div>
+            <nav class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large" id="navigation">
+                <div class="container-fluid">
+                    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbar2Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav flex-grow-1 ">
+                                <li class="nav-item"><a class="nav-link pl-0" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">Products <i class="ri-arrow-down-s-line"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="/Industralistproducts.html">Industrial</a></li>
-                                        <li><a class="dropdown-item" href="/DefenseProducts.html">Defence</a></li>
+                                        <li><a class="dropdown-item" href="./Industralistproducts.html">Industrial</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="./DefenseProducts.html">Defence</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                  <!-- <li class="nav-item"><a class="nav-link" href="#">Technology</a></li> -->
-                                  <li class="nav-item"><a class="nav-link" href="invester.html">Investor Relations</a>
-                                  </li>
-                                  <li class="nav-item"><a class="nav-link" href="esg.html">Sustainability</a></li>
-                                  <!-- <li class="nav-item"><a class="nav-link" href="#">News & Media</a></li> -->
-                                  <!-- <li class="nav-item"><a class="nav-link" href="#">Careers</a></li> -->
-                                  <li class="nav-item"><a class="nav-link" href="news.html">News & Media</a></li>
-                                  <!-- <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">News & Media <i class="ri-arrow-down-s-line"></i></a>
-                                      <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="news.html">News</a></li>
-                                          <li><a class="dropdown-item" href="media.html">Media</a></li>
-                                      </ul>
-                                  </li> -->
-                                  <li class="nav-item"><a class="nav-link"
-                                          href="https://careers.solargroup.com/#!/">Careers</a></li>
-  
-  
-                                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                              </ul>
-                              <ul class="navbar-nav ms-auto navbar-social d-none d-xl-flex">
-                                  <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                                  <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
-                                  <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
-                                  <!-- <li><a href="#"><i class="ri-youtube-fill"></i></a></li> -->
-                                  <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="offcanvas-footer d-block d-lg-none pt-3 pb-3">
-                              <p class="text-muted text-center mb-2 text-sm">Follow us:</p>
-                              <div class="social-links  text-center">
-                                  <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
-                                  <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
-                                  <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
-                                  <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
-                                  <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </nav>
-          </div>
-      </header>
-      <script>
-          document.getElementById('card1').addEventListener('click', function () {
-              this.classList.toggle('expanded');
-          });
-      </script>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Technology</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="invester.html">Investor Relations</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="esg.html">Sustainability</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">News & Media</a></li> -->
+                                <!-- <li class="nav-item"><a class="nav-link" href="#">Careers</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="news.html">News & Media</a></li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">News & Media <i class="ri-arrow-down-s-line"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="news.html">News</a></li>
+                                        <li><a class="dropdown-item" href="media.html">Media</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="nav-item"><a class="nav-link"
+                                        href="https://careers.solargroup.com/#!/">Careers</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto navbar-social d-none d-xl-flex">
+                                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+                                <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                                <!-- <li><a href="#"><i class="ri-youtube-fill"></i></a></li> -->
+                                <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer d-block d-lg-none pt-3 pb-3">
+                            <p class="text-muted text-center mb-2 text-sm">Follow us:</p>
+                            <div class="social-links  text-center">
+                                <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                <!-- <a href="#" target="_blank"><i class="ri-youtube-fill"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- <script>
+        document.getElementById('card1')?.addEventListener('click', function () {
+            this.classList.toggle('expanded');
+        });
+    </script> -->
 
-    <div class="slider">
-        <div class="list overlay-img-wrapper">
-            <div class="item">
+    <h5 class="bread">INDUSTRIAL EXPLOSIVES</h5>
+    <div class="product-tiles">
+        <div class="product-card">
+            <div class="prod-card-img">
                 <img src="./Industrialist/image/Cartridge-min.jpg" alt="">
-
-                <div class="content">
-                    <div class="title">PACKAGED EXPLOSIVES</div>
-                </div>
+                <span>PACKAGED EXPLOSIVES</span>
             </div>
-            <div class="item">
+            <button class="src-btn" data-category="non-permitted">NON-PERMITTED EXPLOSIVES</button>
+            <button class="src-btn" data-category="permitted">PERMITTED EXPLOSIVES</button>
+            <button class="src-btn" data-category="seismic">SEISMIC EXPLOSIVES</button>
+        </div>
+
+        <div class="product-card">
+            <div class="prod-card-img">
                 <img src="./Industrialist/image/Solar-Middleburg828-min.png" alt="">
-
-                <div class="content">
-                    <div class="title">BULK EXPLOSIVES</div>
-                    
-                </div>
+                <span>BULK EXPLOSIVES</span>
             </div>
-            
-            <div class="item">
+            <button class="src-btn">BULK EXPLOSIVES</button>
+        </div>
+
+        <div class="product-card">
+            <div class="prod-card-img">
                 <img src="./Industrialist/image/DSC00583-min.jpg" alt="">
-
-                <div class="content">
-                    <div class="title">INITIATING SYSTEMS</div>
-                </div>
+                <span>INITIATING SYSTEMS</span>
             </div>
-        </div>
-        <div class="thumbnail">
-  
-            <div class="item">
-                <img src="./Industrialist/image/Cartridge-min.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="./Industrialist/image/Solar-Middleburg828-min.png" alt="">
-            </div>
-            <div class="item">
-                <img src="./Industrialist/image/DSC00583-min.jpg" alt="">
-            </div>
-        </div>
-        <div class="wrapper">
-            <a class="link" href="./industrial-explosives.html" target="_blank">
-              <div class="color"></div>
-              <span style="color: #fff;">Explore Products</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-        <div class="nextPrevArrows nextPrevArrows1">
-            <button class="prev"> < </button>
-        </div>
-        <div class="nextPrevArrows nextPrevArrows2">
-            <button class="next"> > </button>
+            <button class="src-btn">ELECTRONIC DETONATOR</button>
+            <button class="src-btn">NON-ELECTRIC DETONATOR</button>
+            <button class="src-btn">ELECTRIC DETONATOR</button>
+            <button class="src-btn">PLAIN DETONATOR</button>
+            <button class="src-btn">CORD RELAY</button>
+            <button class="src-btn">CAST BOOSTERS</button>
+            <button class="src-btn">DETONATING CORDS</button>
+            <button class="src-btn">ALUMINIUM ELEMENTED DET</button>
         </div>
     </div>
+    </div>
+
+    <section>
+        <h5 class="br2" id="target-btn-heading"></h5>
+        <div class="relative-products-parent" id="relative-products-parent"></div>
+    </section>
+
 
     <footer class="footer overflow-hidden position-relative" id="footer">
         <div class="footer-chakra">
-            <img src="/img/footer-chakra.png" alt="">
+            <img src="img/footer-chakra.png" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <div class="widget" style="text-align: center;">
-                        <div class="glow">
-                            <a href="index.html" data-aos="zoom-in" style="padding: 7%;"><img
-                                    src="img/logo.png" alt=""
-                                    class="img-fluid footer-logo mb-3"></a>
-                      
-                                    <div class="gradient-line"></div>
-                                    <div class="particle-wrap"></div>
-    
-                                </div>
-                        <div class="star-container" id="starContainer"></div>
+                    <div class="widget">
+                        <a href="index.html" data-aos="zoom-in"><img src="img/logo.png" alt=""
+                                class="img-fluid footer-logo mb-3"></a>
+                        <div class="gradient-line"></div>
+                        <div class="particle-wrap"></div>
+
                         <!-- <p>Solar provides complete blasting solutions which includes packaged, bulk explosives and initiating systems to meet its customer needs across the globe.</p> -->
                         <div class="social-links" data-aos="fade-up">
                             <a href="#" target="_blank"><i class="ri-facebook-fill"></i></a>
@@ -389,16 +316,31 @@ document.addEventListener(
         <!-- <img src="img/solar-footer-text1.svg" alt="" class="footer-text-logo" id="footerLogoBig"> -->
     </footer>
 
-
-    <!-- <script src="js/custom.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-   
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <!-- <script src="js/preloader.js"></script> -->
-    <script src="./Industrialist/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    
+
+    <script src="plugin/parallax.min.js"></script>
+    <script src="plugin/splitting.min.js"></script>
+
+    <!-- <script src="plugin/particle.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollToPlugin.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- <script src="js/preloader.js"></script> -->
+    <!-- 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/OrbitControls-2.js'></script> -->
+
+    <script src="js/preloader.js"></script>
+    <script src="js/industrial-products.js"></script>
+
 </body>
+
 </html>

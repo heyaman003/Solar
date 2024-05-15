@@ -1,0 +1,117 @@
+.bread {
+    margin: 10% 1% 1%;
+    color: white;
+    background-color: #08142f;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 300px;
+}
+
+.product-tiles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 32%;
+}
+
+.product-card button{
+    display: block;
+    color: black;
+    text-align: center;
+    background-color: transparent;
+    border: 0.5px solid black;
+    margin: 2% 0;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 1% 2%;
+    cursor: pointer;
+    transition: all 1.0 ease-in-out;
+}
+.product-card button:hover{
+    background-color: #C3DCFA;
+    border: none;
+    font-weight: 600;
+
+}
+button.active{
+    background-color: #C3DCFA;
+    border: none;
+    font-weight: 600;
+}
+
+.prod-card-img {
+    width: 100%;
+    height: 330px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 5% 0;
+}
+
+.prod-card-img span {
+    position: absolute;
+    background-color: rgb(216, 7, 7);
+    color: white;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 4px 8px;
+}
+
+.prod-card-img img {
+    width: 100%;
+    height: 100%;
+    scale: 1.2;
+
+}
+.br2{
+
+    background-color: #C3DCFA;
+    color: black;
+    text-align: center;
+    font-size: 14px;
+    width: 470px;
+    border-radius: 50px;
+    padding: 2px 4px;
+    margin: 2% 1%;
+}
+.relative-products-container{
+    width: 98%;
+    margin: 2% auto;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1% 0 2%;
+    border-bottom: 1px solid black;
+}
+.rel-prod-img{
+    width: 470px;
+    height: 100%;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+}
+.rel-prod-img img{
+    width: 100%;
+    /* height: 100%; */
+}
+.rel-prod-content{
+    width: 50%;
+    height: fit-content;
+    text-align: justify;
+    margin-left: 2%;
+    line-height: 1.3;
+}
+.rel-prod-content h6{
+    color: #F50129;
+    font-size: 20px;
+    font-weight: 700;
+}
