@@ -10,6 +10,7 @@
 
 .product-tiles {
     width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -17,9 +18,53 @@
 
 .product-card {
     width: 32%;
+
+}
+/* ****************** */
+/* MEDIA FOR TAB  */
+/* ****************** */
+/* @media (max-width: 768px) {
+  .product-card {
+    width: 48%;
+
+  }
+} */
+/* ****************** */
+/* MEDIA FOR MOBILE  */
+/* ****************** */
+@media (max-width: 468px) {
+  .product-tiles {
+  flex-direction: column;
+}
+  .product-card {
+    width: 98%;
+    margin: auto;
+}
+.relative-products-container {
+  margin: auto;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center
+   
 }
 
-.product-card button{
+.rel-prod-img {
+  width: 98% !important; /* Take full width on mobile */
+
+}
+.rel-prod-content{
+  width: 98% !important;
+  margin: auto;
+  
+}
+
+.rel-prod-content h6{
+  margin: 2% 0;
+  text-align: center;
+}
+
+}
+.product-card button,
+.card button{
     display: block;
     color: black;
     text-align: center;
@@ -33,7 +78,9 @@
     cursor: pointer;
     transition: all 1.0 ease-in-out;
 }
-.product-card button:hover{
+
+.product-card button:hover,
+.card button:hover{
     background-color: #C3DCFA;
     border: none;
     font-weight: 600;
@@ -65,6 +112,7 @@ button.active{
     padding: 4px 8px;
 }
 
+
 .prod-card-img img {
     width: 100%;
     height: 100%;
@@ -72,35 +120,45 @@ button.active{
 
 }
 .br2{
-
+  width: 30%;
     background-color: #C3DCFA;
     color: black;
     text-align: center;
-    font-size: 14px;
-    width: 470px;
+    font-size: 18px;
     border-radius: 50px;
-    padding: 2px 4px;
+    padding: 4px 8px;
     margin: 2% 1%;
 }
 .relative-products-container{
     width: 98%;
     margin: 2% auto;
-    height: 300px;
+    height: auto;
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     padding: 1% 0 2%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(0.25turn, white, rgb(0, 0, 0, 0.5), white);
+    border-image-slice: 1;
+    width: 98%;
 }
 .rel-prod-img{
-    width: 470px;
-    height: 100%;
+    width: 37%;
+    height: auto;
     border-radius: 10px;
     /* border: 2px solid black; */
     display: flex;
     align-items: center;
+    justify-content: center;
+    
+    
 }
 .rel-prod-img img{
-    width: 100%;
+    /* width: 90%; */
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    max-width: 90%;
+    height: auto; /*
+    /* height: 90%; */
     /* height: 100%; */
 }
 .rel-prod-content{
@@ -113,5 +171,95 @@ button.active{
 .rel-prod-content h6{
     color: #F50129;
     font-size: 20px;
+    margin-bottom: 2%;
     font-weight: 700;
 }
+/* ************************************************* *
+/* DEFENSE PAGE CSS Start */
+/* ************************************************* */
+/* Default styles */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  flex: 0 0 30%; /* Original width for larger screens */
+  margin: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: red;
+  border: none;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn-prev {
+  left: 1%;
+}
+
+.btn-next {
+  right: 1%;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 468px) {
+  .card {
+    flex: 0 0 100%; /* Full width for mobile screens */
+    margin: 0 2%; /* No margin for mobile screens */
+  }
+
+  .card-img {
+    height: 200px; /* Adjust height as needed for mobile */
+  }
+
+  .btn {
+    width: 40px; /* Adjust button size as needed for mobile */
+    height: 40px; /* Adjust button size as needed for mobile */
+  }
+
+  .btn-prev {
+    left: 5px; /* Adjust left position as needed for mobile */
+  }
+
+  .btn-next {
+    right: 5px; /* Adjust right position as needed for mobile */
+  }
+  .br2{
+    width: 95%;
+    margin: auto;
+    }
+}
+
+/* ************************************************* *
+/* DEFENSE PAGE CSS END */
+/* ************************************************* */
