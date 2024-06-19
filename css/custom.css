@@ -12999,7 +12999,7 @@ header.header::before {
 /* svg draw css end */
 .gradient-line {
     width: 25vw;
-	margin: auto;
+	margin: 0 auto 5%;
     height: 4px;
     background: linear-gradient(to right, transparent, rgb(34, 103, 222), transparent);
 }

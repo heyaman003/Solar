@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.loader-container img');
+  let currentImageIndex = 0;
+
+  setInterval(() => {
+      images[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].classList.add('active');
+  }, 600); // Change image every 2 seconds
+});
 // window.onload = init;
 // console.ward = function() {};
 

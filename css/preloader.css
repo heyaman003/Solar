@@ -92,6 +92,7 @@ animation-iteration-count: 1;
 }
 #loading {
 background-color: #ec1f2f;
+/* background-color: #09142e; */
 height: 100%;
 width: 100%;
 position: fixed;
@@ -166,13 +167,14 @@ top: 0px;
   position: absolute;
   width: 50vw;
   top: 50%;
+  display: flex;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-  /* margin: auto; */
+  /* border: 2px solid white; */
   justify-content: center;
  }
-@keyframes animate-svg-stroke-1 {
+/* @keyframes animate-svg-stroke-1 {
   0% {
     stroke-dashoffset: 16413.73046875px;
     stroke-dasharray: 16413.73046875px;
@@ -182,24 +184,27 @@ top: 0px;
     stroke-dashoffset: 0;
     stroke-dasharray: 16413.73046875px;
   }
-}
+} */
 
-.svg-elem-1 {
+/* .svg-elem-1 {
   animation: animate-svg-stroke-1 2s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s both;
-}
+} */
 
+/* .child-svg-2{
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+} */
 
 .child-svg-2{
   position: absolute;
-  /* top: 5%; */
   margin-top: 4%;
   width: fit-content;
   height: 10vh;
-  top: 65%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   width: 70%;
-
 }
 
 /***************************************************
@@ -207,7 +212,33 @@ top: 0px;
 * MIT license (https://opensource.org/licenses/MIT)
 * W. https://svgartista.net
 **************************************************/
-
+/* .main{
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+} */
+.loader-container {
+  position: relative;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.loader-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40%; 
+  max-height: 80%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.loader-container img.active {
+  opacity: 1;
+}
 @keyframes animate-svg-fill-1 {
   0% {
     fill: transparent;

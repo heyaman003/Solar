@@ -563,6 +563,22 @@ window.addEventListener("scroll", (e) => {
 
 // SVG DRAW JS END***********
 
+document.addEventListener("DOMContentLoaded", function () {
+  var rotatingTexts = document.querySelectorAll('.rotating-text-wrapper p');
+  var currentIndex = 0;
+  var intervalDuration = 5000; // Change this value to adjust the duration between each text animation
+
+  // Show the first text initially
+  rotatingTexts[currentIndex].style.display = 'block';
+
+  function toggleText() {
+      rotatingTexts[currentIndex].style.display = 'none';
+      currentIndex = (currentIndex + 1) % rotatingTexts.length;
+      rotatingTexts[currentIndex].style.display = 'block';
+  }
+
+  setInterval(toggleText, intervalDuration);
+});
 
 
 // SVG DRAW 2 JS START***********
@@ -583,9 +599,6 @@ window.addEventListener('scroll', function() {
 });
 
 // SVG DRAW 2 JS END***********
-
-
-
 
 
 // Chakra Video Play - Pause JS Start************
@@ -613,3 +626,129 @@ window.addEventListener('scroll', function() {
   observer.observe(document.querySelector('#chakraCompVideo')); 
 // Chakra Video Play - Pause JS JS End***********
 
+// NEW WORLD MAP JS START
+document.addEventListener("DOMContentLoaded", function() {
+  const showDotsButton = document.getElementById("unique-map-2");
+  const showStatesButton = document.getElementById("unique-map-3");
+  const showAllDotsButton = document.getElementById("unique-map-1");
+  const dots = document.querySelectorAll(".about-map");
+  const mapImg = document.querySelector(".map-img");
+  const worldMapContainer = document.getElementsByClassName('world-map')[0];
+
+  // Show the default map data for unique-map-1 on page load
+  showAllDots();
+  changeMapImage("./img/wold-mapx.svg");
+
+  showDotsButton.addEventListener("click", function() {
+    hideDotsBetween16And42(); // Hide dots between tool-16 to tool-42
+    showAdditionalDots(39); // Display another 39 dots
+    changeMapImage("./img/wold-mapx.svg");
+  });
+
+  showStatesButton.addEventListener("click", function() {
+    showIndiaDots();
+    changeMapImage("./img/india_map.svg");
+  });
+
+  showAllDotsButton.addEventListener("click", function() {
+    showAllDots();
+    changeMapImage("./img/wold-mapx.svg");
+  });
+
+  function hideDotsBetween16And42() {
+    dots.forEach(dot => {
+      const className = dot.classList[0];
+      const toolNumber = parseInt(className.split('-')[1]);
+      if (toolNumber >= 16 && toolNumber <= 42) {
+        dot.classList.remove('show');
+        setTimeout(() => {
+          dot.style.display = 'none';
+        }, 400); // Match this duration with the CSS transition duration
+      }
+    });
+  }
+
+  function showAdditionalDots(number) {
+    let count = 0;
+    dots.forEach(dot => {
+      const className = dot.classList[0];
+      const toolNumber = parseInt(className.split('-')[1]);
+      if (count < number) {
+        if (toolNumber < 16 || toolNumber > 42) {
+          dot.style.display = 'block';
+          setTimeout(() => {
+            dot.classList.add('show');
+          }, 10); // Slight delay to ensure display is set before animation
+          count++;
+        } else {
+          dot.classList.remove('show');
+          setTimeout(() => {
+            dot.style.display = 'none';
+          }, 400);
+        }
+      } else {
+        dot.classList.remove('show');
+        setTimeout(() => {
+          dot.style.display = 'none';
+        }, 400);
+      }
+    });
+  }
+
+  function showIndiaDots() {
+    dots.forEach(dot => {
+      const className = dot.classList[0];
+      const toolNumber = parseInt(className.split('-')[1]);
+      if (toolNumber >= 16 && toolNumber <= 42) {
+        dot.style.display = 'block';
+        setTimeout(() => {
+          dot.classList.add('show');
+        }, 10);
+      } else {
+        dot.classList.remove('show');
+        setTimeout(() => {
+          dot.style.display = 'none';
+        }, 400);
+      }
+    });
+  }
+
+  function showAllDots() {
+    dots.forEach(dot => {
+      dot.style.display = 'block';
+      setTimeout(() => {
+        dot.classList.add('show');
+      }, 10);
+    });
+    hideDotsBetween16And42();
+  }
+
+  function changeMapImage(imageSrc) {
+    worldMapContainer.classList.add('fade-out');
+
+    setTimeout(() => {
+      mapImg.src = imageSrc;
+
+      if (imageSrc.includes("india_map.svg")) {
+        worldMapContainer.style.width = '45vw';
+        worldMapContainer.style.height = 'auto';
+      } else {
+        // Reset size for other images
+        worldMapContainer.style.width = '100%';
+        worldMapContainer.style.height = 'auto';
+      }
+
+      worldMapContainer.classList.remove('fade-out');
+      worldMapContainer.classList.add('fade-in');
+    }, 500); // Match this duration with the CSS transition duration
+
+    // Remove fade-in class after animation completes to reset state
+    setTimeout(() => {
+      worldMapContainer.classList.remove('fade-in');
+    }, 1000); // Duration longer than CSS transition to ensure it's fully visible
+  }
+});
+
+
+
+// NEW WORLD MAP JS END
